@@ -1,0 +1,147 @@
+body {
+    background: #111111;
+}
+
+#FrontMenuDiv {
+    background: gray;
+    position: fixed;
+    width: 960px;
+    height: 600px;
+    top: 10px;
+    left: 50%;
+    margin-left: -480px;
+}
+#LeftSideBarDiv {
+    float: left;
+    width: 240px;
+    text-align: center;
+    margin: 10px;
+    background: #000000;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+#MainContentDiv {
+    float: left;
+    width: 480px;
+    text-align: center;
+}
+.MainContentClass {
+    border-radius: 10px;
+    background: #000000;
+    width: 460px;
+    height: 396px;
+    margin: 10px;
+    opacity: 0.9;
+}
+#FrontMenuLogo {
+    margin: 15px;
+}
+.FrontMenuButton {
+    margin: 10px;
+    font-size: 30px;
+    width: 220px;
+}
+
+#button1{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 217px;
+}
+#button2{
+    position: fixed;
+    top: 10px;
+    left: 80px;
+}
+#pausebtn{
+    position: fixed;
+    top: 40px;
+    left: 10px;
+}
+#unpausebtn{
+    position: fixed;
+    top: 70px;
+    left: 10px;
+}
+#infop {
+    position: fixed;
+    top: 150px;
+    left: 10px;
+    width: 200px;
+    color: white;
+}
+#MouseCanvasPos{
+    position: fixed;
+    top: 0;
+    right: 5px;
+}
+#p1 {
+    position: fixed;
+    top: 20px;
+    right: 5px;
+}
+#FPS {
+    position: fixed;
+    top: 40px;
+    right: 5px;
+}
+#StartGameButton {
+    position: fixed;
+    top: 250px;
+    left: 10px;
+}
+
+#bgCanvas {
+    z-index: 0;
+}
+#structCanvas{
+    z-index: 1;
+}
+#unitCanvas{
+    z-index: 2;
+}
+#hudbgCanvas{
+    z-index: 4;
+}
+#hudCanvas{
+    z-index: 5;
+}
+#messageCanvas{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -480px;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    z-index: 3;
+}
+
+.MainCanvas {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -480px;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.HudCanvas {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -480px;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

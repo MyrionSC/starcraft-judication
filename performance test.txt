@@ -1,0 +1,140 @@
+
+
+Tests not recorded while spawning. Tests recorded 10 seconds to 0 seconds before next spawn.
+
+0 wave (0 infested terrans)
+    before QT:
+        With all: 1.029
+        Without Collision Detection: 1.010
+        Without Target Detection: 1.029
+        With none: 1.005
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+1 wave (12 infested terrans)
+    before QT:
+        With all: 1.044
+        Without Collision Detection: 1.017
+        Without Target Detection: 1.015
+        With none: 1.003
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+2 wave (36 infested terrans)
+    before QT:
+        With all: 2.01
+        Without Collision Detection: 1.597
+        Without Target Detection: 2.155
+        With none: 1.250
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+3 wave (72 infested terrans)
+    before QT:
+        With all: 3.10
+        Without Collision Detection: 2.022
+        Without Target Detection: 5
+        With none: 2.001
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+4 wave (120 infested terrans)
+    before QT:
+        With all: 6.98
+        Without Collision Detection: 2.948
+        Without Target Detection: 10.16
+        With none: 2.147
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+5 wave (180 infested terrans)
+    before QT:
+        With all: 17.35
+        Without Collision Detection: 3.972
+        Without Target Detection: 19.84
+        With none: 3.048
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+6 wave (252 infested terrans)
+    before QT:
+        With all: 31.30
+        Without Collision Detection: 5.107
+        Without Target Detection: 34.973
+        With none: 4.010
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+7 wave (336 infested terrans)
+    before QT:
+        With all: 52.75
+        Without Collision Detection: 7.358
+        Without Target Detection: 49.496
+        With none: 4.931
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+8 wave (432 infested terrans)
+    before QT:
+        With all: 82.83
+        Without Collision Detection: 10.056
+        Without Target Detection: 78.189
+        With none: 6.009
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+9 wave (540 infested terrans)
+    before QT:
+        With all: 127
+        Without Collision Detection: 14.226
+        Without Target Detection: 141.88
+        With none: 7.093
+
+    after QT:
+        With all:
+        Without Collision Detection:
+        Without Target Detection:
+        With none:
+
+Remarks:
+Times seem to get higher as the wave gets along
+At wave 5 game is visibly slower
+without targetdetection the game runs slower than with targetdetection. This may be because the IT are brushing against the cc. But probably not. IDK.
+Collision detection takes substantially more performance than targetdetection. Good prospects for implementation of Quad tree :)
+

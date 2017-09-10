@@ -1,0 +1,279 @@
+Developement plan for Starcraft browser game
+
+To do list:
+
+Functionality:
+
+Urgent:
+
+    Try missile radian fix on units
+    pause game in sandbox
+    fix autoturret (so it doesn't change target to closest)
+    Minimap
+    add structure hp bar
+    add structure repair option
+    More Units (Hellbat, vulture, hydralisk first, infested terran marine)
+    Structures should be able to be destroyed while building
+    More canvas (GroundEffectsCanvas(For ground level explosions), FlyingUnitShadowCanvas (For flying unit shadows),
+        FlyingUnitCanvas (for flying units), EffectsCanvas (for upper level effects such as bansheeflybys)
+        ObjectInfoCanvas (for production and health bars etc.))
+        Move health and productionbars etc. to ObjectInfoCanvas.
+    Upgrades for engi-bay
+    redesign objects with new design style (round and pixelwide black edge)
+
+Can wait:
+    Controlpanel button, so player know that it exists
+    Win and loose conditions
+    Optimisations (quad-tree for collision detection)
+        Attack animation
+
+Far in future:
+    log in with backend
+    Campaign
+
+
+
+Art:
+    Hydralisk
+    Firebat
+    Vulture
+    Tank ( Sieged / Unsieged ) Maybe animation inbetween
+
+
+
+Known bugs:
+    Collisiondetection isn't perfect.
+    Frontmenu loads faster than objects sometimes, resulting in game = undefined on init.
+    health bars of infested terrans get long at death time and doesnt get deleted
+    Red autoturret doesnt die right
+    fix clear units from field function
+
+
+
+
+
+
+
+Gameplay:
+
+Two teams, top and bottom, battle it out across an open field. Units from the Starcraft universe are used as mediums.
+Both teams start with one main building and 6 (subject to change) workers. If this main building dies, the team looses.
+Besides the main building is minerals and gas. Amount of these will change per mission.
+10 building spots (subject to change) are available for constructing unit-producing, supply and tech buildings.
+Three (maybe more) overlapping lanes exist. The player decide which lane units are currently being sent to.
+The units are sent to a random position at the start of the chosen lane.
+
+When units meet in midfield they move towards each other if they are in aggression range and attack each other when in attack range (see concept art).
+When units reach opposing players buildings, they start attack these untill these are destroyed or more enemy units arrive. When opposing buildings inside the aggression range are cleared away, units go on
+to the main building. Once this dies, the game ends.
+
+Upgrades are instantly applied to all relevant units when done. Abilities can be cast at the position of the mouse or globally, if applicable.
+
+Controls:
+    with tab, the player can go to a controlpanel, wherefrom he can choose behaviour for his units.
+
+This makes for a game where enemy AoE can be used widely, but the player can counter it to a degree.
+
+
+
+
+
+
+
+
+
+
+Campaign:
+
+Overlying story line brainstorm:
+
+
+
+Characters:
+    Player
+        Young graduate from command school with exemplary grades. Has never seen battle. Never talks. Graduated shortly after the events of
+        Heart of the Swarm. Answers to [newly established council]
+
+    Mentor
+        Old veteran who has never had the education necessary to rise in rank but has many years of combat experience against the three races.
+        Calls the player kid/son in the start. slightly cynical, he is a man who has seen too much. He doesn't really care about the powerstruggles
+        and politics of the koprulu sector. He cares about protecting the innocents. On the bottom, a good man. Closeminded and paranoid when it comes
+        to communicating with the zerg and protoss. The reason for his paranoia is that he fought in the Brood Wars, where the shifting alliances of
+        races and factions were hard to keep track of for the uninformed officers of the Dominion.
+
+    Council
+        A newly established council, concerned with governing the terrans after Mengsk fall.
+        This council is more or less friendly towards Jim Raynor. He is listened to and regarded as a leader of terran military.
+
+    Banshee Pilot
+        Female. A true badass that shows up now and then to kick ass and say badass things. Head of a banshee wing that can airstrike an area.
+
+    Swarm Queen
+        A swarm queen, made by Kerrigan as a zerg lieutanent, capable of conscious thought. Has orders from Kerrigan, who has left the Koprulu sector in order to
+        hunt down the Xel'Naga, to help Jim Raynor and the ones specified by him, of which the player is one, but only these. Rescues the player in mission
+        4 or 5 when he is about to be overrun by enemy zerg. Her and the Mentor bickers like an old couple, because of his prejudices.
+        Could be the real protagonist. The story could be about how she helps the terrans and gets only animosity in return.
+
+    Zerg Cerebrate
+        The Big Bad. A zerg cerebrate, who was released from the control of the overmind after the Aiur campaign. Instead of joining with the other
+        cerebrates to make a new overmind at the start of the brood wars, he hid himself on a remote moon. Now he has come out of hiding, sensing that
+        the Queen of Blades has left the sector. Hopes to take over the sector in abscence of worthy rivals and eventually amass enough power
+        to challenge Kerrigan, should she return. It is up to the player and allies to stop him.
+
+Mission specifics
+
+Mission 1:
+
+The player should be lead through the commands and basic controls in a safe enviroment, be introduced to the mentor character and be introduced
+to the zerg.
+
+1: The player lands on [world], getting ready to begin basic command training. [instructor/mentor figure] introduces himself.
+2: The player has to build a number of scvs, supply depots and a barracks before the mission proceeds.
+3: A mechanized training opponent is introduced. The player is instructed to build some number of marines to combat the training drones.
+4: When the training drones and the training drone production structure has been destroyed by the player, a larger drone factory is dropped
+   a little away from the player. This drone factory starts accumulating drones. Before the wave is sent however, a zerg spore lands behind
+   the drone factory. The drones are sent towards this to combat the new threat. The player and the drones are now allied. The player is instructed
+   to build autoturret defenses and marines by the fuming mentor character.
+5: The zerg vanquishes the drones after some time and heads for the player. The player has to handle a few easy waves.
+6: An overwhelming amount of Zerg spawn suddenly. The mentor prepares the player for the inevitable death ("I am sorry, kid/son. Sometimes the
+   only thing you can do is die"), while the zerg advance.
+7: A transmission is received from [Badass Banshee pilot]. She says badass things. The banshee wing takes out the zerg with a concentrated airstrike.
+8: The player is instructed to take out the spore. A few zerg are still spawned, but they are easily handled. When the spore dies, the mission ends.
+
+Mission 2:
+
+
+
+
+
+
+
+
+
+
+Concept Art:
+
+See concept art png
+
+
+
+
+
+
+
+Components and knowledge needed:
+
+Must have:
+    Objects
+        Units
+            Terran
+                SCV
+                Marine (Done)
+                Firebat
+                    Cone attack
+                Medic
+                    Behaviour: Heals friendly infantry
+                Ghost
+                    Behaviour: Snipes opposing casters or something
+                Vulture
+                    Behaviour: Kites opponents
+                Siegetank
+                    Ability: Siege, unsiege
+                Goliath
+                    Long anti air
+                Wraith
+                (Science Vessel. Might be hard to do)
+                Battlecruiser
+            Zerg
+                Drone (Maybe)
+                Zergling (Two spawned at once maybe) (Done)
+                Hydralisk
+                Impaler (Lurker but with longrange single target anti armor attack).
+                Ultralisk
+                Mutalisk
+                Scourge
+                Guardian
+
+        Buildings
+            Terran
+                Command center (Main building) (Done)
+                    Units: SCV
+                    Ability: Scan (Used to see burrowed Impalers)
+                Barracks
+                    Units: Marine, Firebat, Medic, Ghost
+                Factory
+                    Requires Barracks
+                    Units: Vulture, Siegetank, Goliath
+                Starport
+                    Requires Factory
+                    Units: Wraith, Sci Vessel, Battle Cruiser
+                Supply Depot
+                    - Upgrades to Expanded Supply Depot
+                Engineering Bay
+                    - Allows Firebats to be build from barracks
+                    Upgrades: Research Medic, infantry attack, infantry armor, Marine range, Stimpacks, healing efficiency, blueflame, building armor.
+                Armory
+                    Requires Engineering Bay
+                    - allows goliaths to be build from factory
+                    Upgrades: Vehicle and air attack, vehicle and air armor
+                Ghost
+                Autoturret
+                    Upgrades to Overloaded Autoturret
+            Zerg
+                Main hatch
+                    Units: Drone
+                    Upgrades to Lair
+                        Requires Spawningpool
+                        Allows upgrade to Impaler lair from Hydralisk Den
+                        Allows Spire
+                        Upgrades to Hive
+                            Allows Ultralisk Cavern and Greater Spire
+                Birthing queen
+                    Builds zerg units
+                Spawningpool
+                    Allows Zerglings to be build
+                    Upgrades: Zergling speed, Adrenal Glands (requires Hive)
+                Hydralisk Den
+                    Requires Spawningpool
+                    Upgrade: Hydralisk Range
+                    - Upgrades to Impaler lair
+                        Upgrade Impaler Antiarmor damage
+                Ultralisk Cavern
+                    Units: Ultralisk
+                    Upgrade Ultralisk armor +2 and Ultralisk speed
+                Spire
+                    Units: Mutalisk, Scourge
+                    Upgrades: Air attack, air armor
+                    - Upgrades to Greater Spire
+                        Units: Guardian
+                Bile launcher: Ground and attack
+                    Upgrades to Evolved Bile Launcher
+        Terrain and resources
+            Minerals
+            Gas
+
+    User interface
+        First map
+            Main building spot
+            Minerals
+            Gas
+            10 Building spots
+            Lanes
+            Hud
+
+Nice to have
+
+    Objects
+        Units
+            Protoss units
+            neutral aggressive creeps
+            Hero units
+        Buildings
+            Protoss buildings
+            Xel'naga buildings
+            Neutral aggressive buildings
+            Neutral capturable buildings
+        Terrain and resources
+            neutral barriers
+            Power ups
+            Gold minerals

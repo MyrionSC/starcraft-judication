@@ -1,0 +1,90 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da">
+<head>
+    <title>Hell March</title>
+    <style>
+
+        #p1{
+            position: fixed;
+            top: 40px;
+            left: 20px;
+        }
+        #button1{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        #button2{
+            position: fixed;
+            top: 10px;
+            left: 80px;
+        }
+        #MouseCanvasPos{
+            position: fixed;
+            top: 0;
+            right: 5px;
+        }
+
+
+        #bgCanvas {
+            z-index: 0;
+        }
+        #structCanvas{
+            z-index: 1;
+        }
+        #unitCanvas{
+            z-index: 2;
+        }
+        #messageCanvas{
+            z-index: 3;
+        }
+        #hudbgCanvas{
+            z-index: 4;
+        }
+        #hudCanvas{
+            z-index: 5;
+        }
+        .MainCanvas {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -480px;
+
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .HudCanvas {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            margin-left: -480px;
+
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body style="height: 904px">
+
+<span id="span"></span>
+
+
+<canvas width="960" height="920" class="MainCanvas" id="bgCanvas">Canvas not supported in this browser</canvas>
+<canvas width="960" height="920" class="MainCanvas" id="structCanvas"></canvas>
+<canvas width="960" height="920" class="MainCanvas" id="unitCanvas"></canvas>
+<canvas width="960" height="920" class="MainCanvas" id="messageCanvas"></canvas>
+<canvas width="960" height="0" class="HudCanvas" id="hudbgCanvas"></canvas>
+<canvas width="960" height="0" class="HudCanvas" id="hudCanvas"></canvas>
+
+
+<script type="text/javascript" src="DeathMarchJs.js"></script>
+
+</body>
+</html>
